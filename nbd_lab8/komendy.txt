@@ -1,0 +1,4 @@
+{"is_alive": true, "number": 12, "first_name": "Peter", "last_name": "Capaldi"}
+
+
+curl -vi -X DELETE http://127.0.0.1:8098/buckets/s22215/keys/twelfth

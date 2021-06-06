@@ -1,0 +1,26 @@
+﻿[
+  {
+    "director.name": "Cameron Crowe",
+    "Movie": [
+      "Jerry Maguire"
+    ]
+  },
+  {
+    "director.name": "Lana Wachowski",
+    "Movie": [
+      "Speed Racer"
+    ]
+  },
+  {
+    "director.name": "Lilly Wachowski",
+    "Movie": [
+      "Speed Racer"
+    ]
+  },
+  {
+    "director.name": "Nancy Meyers",
+    "Movie": [
+      "Something's Gotta Give"
+    ]
+  }
+]

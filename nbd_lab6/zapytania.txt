@@ -1,0 +1,149 @@
+Część 1 – Wycieczki górskie
+
+1. Znajdź trasy którymi można dostać się z Darjeeling na Sandakphu, mające najmniejszą ilość etapów.
+
+MATCH p=shortestPath(
+(Darjeeling:town {name:"Darjeeling"})-[*]-(Sandakphu:peak {name:"Sandakphu"})
+)
+RETURN p
+
+2. Znajdź mające najmniej etapów trasy którymi można dostać się z Darjeeling na Sandakphu i które mogą być wykorzystywane zimą.
+
+MATCH p=shortestPath(
+(Darjeeling:town {name:"Darjeeling"})-[*]-(Sandakphu:peak {name:"Sandakphu"})
+)
+WHERE ALL(r in relationships(p) WHERE r.winter = "true")
+RETURN p
+
+(Brak w task2.cypher)
+
+3.1. Uszereguj trasy którymi można dostać się z Darjeeling na Sandakphu według dystansu.
+
+MATCH (Darjeeling:town {name:"Darjeeling"}), (Sandakphu:peak {name:"Sandakphu"}) , p = (Darjeeling)-[*]->(Sandakphu)
+RETURN p, REDUCE(distance = 0, r in relationships(p) | distance+r.distance) AS totalDistance
+ORDER BY totalDistance ASC
+
+3.2. Znajdź wszystkie miejsca do których można dotrzeć przy pomocy roweru (twowheeler) z Darjeeling latem.
+
+Match p = (Darjeeling:town{name:'Darjeeling'})-[tw:twowheeler*]->(m)
+WHERE ALL(r in relationships(p) WHERE r.summer = "true")
+RETURN Darjeeling, tw, m, m.name as POSSIBLE_SUMMER_TARGET
+
+(Brak w task2.cypher)
+
+==============================================================================================================
+
+Część 2 – Połączenia lotnicze
+
+4. Uszereguj porty lotnicze według ilości rozpoczynających się w nich lotów.
+
+MATCH (flight:Flight)-[:ORIGIN]->(airport:Airport)
+RETURN DISTINCT airport.name, COUNT(airport.name) AS number_of_flights
+ORDER BY number_of_flights DESC
+
+5. Znajdź wszystkie porty lotnicze, do których da się dolecieć (bezpośrednio lub z przesiadkami) z Los Angeles (LAX) wydając mniej niż 3000.
+// No changes.
+CALL {
+	MATCH p = (source:Airport{name:"LAX"})<-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]->(destination1:Airport)
+	MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+	WHERE destination1.name <> "LAX" AND ticket1.price < 3000
+	RETURN destination1 AS flights
+	UNION ALL
+	// 1 change.
+	MATCH p = (source:Airport{name:'LAX'})-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(destination1:Airport)-[:ORIGIN]-(f2:Flight)-[:DESTINATION]-(destination2:Airport)
+	MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+	MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+	WHERE destination1.name <> "LAX" AND destination2.name <> "LAX" AND f1.date < f2.date AND ticket1.price + ticket2.price < 3000
+	RETURN destination2 AS flights
+	UNION ALL
+	// 2 changes.
+	MATCH p = (source:Airport{name:'LAX'})-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(destination1:Airport)-[:ORIGIN]-(f2:Flight)-[:DESTINATION]-(destination2:Airport)-[:ORIGIN]-(f3:Flight)-[:DESTINATION]-(destination3:Airport)
+	MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+	MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+	MATCH (ticket3:Ticket{class:"economy"})-[:ASSIGN]->(f3)
+	WHERE destination1.name <> "LAX" AND destination2.name <> "LAX" AND destination3.name <> "LAX" AND f1.date < f2.date AND f2.date < f3.date AND ticket1.price + ticket2.price + ticket3.price < 3000
+	RETURN destination3 AS flights
+	UNION ALL
+	// 3 changes.
+	MATCH p = (source:Airport{name:'LAX'})-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(destination1:Airport)-[:ORIGIN]-(f2:Flight)-[:DESTINATION]-(destination2:Airport)-[:ORIGIN]-(f3:Flight)-[:DESTINATION]-(destination3:Airport)-[:ORIGIN]-(f4:Flight)-[:DESTINATION]-(destination4:Airport)
+	MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+	MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+	MATCH (ticket3:Ticket{class:"economy"})-[:ASSIGN]->(f3)
+	MATCH (ticket4:Ticket{class:"economy"})-[:ASSIGN]->(f4)
+	WHERE destination1.name <> "LAX" AND destination2.name <> "LAX" AND destination3.name <> "LAX" AND destination4.name <> "LAX" AND f1.date < f2.date AND f2.date < f3.date AND f3.date < f4.date AND ticket1.price + ticket2.price + ticket3.price + ticket4.price < 3000
+	RETURN destination4 AS flights
+	UNION ALL
+	// 4 changes.
+		MATCH (source:Airport{name:'LAX'})-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(destination1:Airport)-[:ORIGIN]-		(f2:Flight)-[:DESTINATION]-(destination2:Airport)-[:ORIGIN]-(f3:Flight)-[:DESTINATION]-		(destination3:Airport)-[:ORIGIN]-(f4:Flight)-[:DESTINATION]-(destination4:Airport)-[:ORIGIN]-(f5:Flight)-[:DESTINATION]-(destination5:Airport)
+	MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+	MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+	MATCH (ticket3:Ticket{class:"economy"})-[:ASSIGN]->(f3)
+	MATCH (ticket4:Ticket{class:"economy"})-[:ASSIGN]->(f4)
+	MATCH (ticket5:Ticket{class:"economy"})-[:ASSIGN]->(f5)
+	WHERE destination1.name <> "LAX" AND destination2.name <> "LAX" AND destination3.name <> "LAX" AND destination4.name <> "LAX" AND destination5.name <> "LAX" AND f1.date < f2.date AND f2.date < f3.date AND f3.date < f4.date AND f4.date < f5.date AND ticket1.price + ticket2.price + ticket3.price + ticket4.price + ticket5.price < 3000
+	RETURN destination5 AS flights
+	UNION ALL
+//5 changes.
+MATCH (source:Airport{name:'LAX'})-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(destination1:Airport)-[:ORIGIN]-(f2:Flight)-[:DESTINATION]-(destination2:Airport)-[:ORIGIN]-(f3:Flight)-[:DESTINATION]-(destination3:Airport)-[:ORIGIN]-(f4:Flight)-[:DESTINATION]-(destination4:Airport)-[:ORIGIN]-(f5:Flight)-[:DESTINATION]-(destination5:Airport)-[:ORIGIN]-(f6:Flight)-[:DESTINATION]-(destination6:Airport)
+MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+MATCH (ticket3:Ticket{class:"economy"})-[:ASSIGN]->(f3)
+MATCH (ticket4:Ticket{class:"economy"})-[:ASSIGN]->(f4)
+MATCH (ticket5:Ticket{class:"economy"})-[:ASSIGN]->(f5)
+MATCH (ticket6:Ticket{class:"economy"})-[:ASSIGN]->(f6)
+WHERE destination1.name <> "LAX" AND destination2.name <> "LAX" AND destination3.name <> "LAX" AND destination4.name <> "LAX" AND destination5.name <> "LAX" AND destination6.name <> "LAX" AND f1.date < f2.date AND f2.date < f3.date AND f3.date < f4.date AND f4.date < f5.date AND f5.date < f6.date AND ticket1.price + ticket2.price + ticket3.price + ticket4.price + ticket5.price + ticket6.price < 3000
+RETURN destination6 AS flights
+} RETURN DISTINCT flights
+
+6. Uszereguj połączenia, którymi można dotrzeć z Los Angeles (LAX) do Dayton(DAY) według ceny biletów.
+
+MATCH (source:Airport{name:"LAX"})-[:ORIGIN]-(f:Flight)-[:DESTINATION]-(destination:Airport{name:"DAY"})
+MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f)
+MATCH (ticket2:Ticket{class:"business"})-[:ASSIGN]->(f)
+MATCH (ticket3:Ticket{class:"firstClass"})-[:ASSIGN]->(f)
+RETURN source, destination, f, ticket1, ticket2, ticket3
+ORDER BY ticket1.price, ticket2.price, ticket3.price
+
+(Brak w task2.cypher)
+
+7. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY).
+
+MATCH (source:Airport{name:"LAX"})-[:ORIGIN]-(f:Flight)-[:DESTINATION]-(destination:Airport{name:"DAY"})
+MATCH (ticket:Ticket{class:"economy"})-[:ASSIGN]->(f)
+RETURN source, destination, f, ticket
+ORDER BY ticket.price ASC
+LIMIT 1
+
+(Brak w task2.cypher)
+
+8. Znajdź najtańsze połączenie z Los Angeles (LAX) do Dayton (DAY) w klasie biznes.
+
+MATCH (source:Airport{name:"LAX"})-[:ORIGIN]-(f:Flight)-[:DESTINATION]-(destination:Airport{name:"DAY"})
+MATCH (ticket:Ticket{class:"business"})-[:ASSIGN]->(f)
+RETURN source, destination, f, ticket
+ORDER BY ticket.price ASC
+LIMIT 1
+
+(Brak w task2.cypher)
+
+9. Uszereguj linie lotnicze według ilości miast, pomiędzy którymi oferują połączenia (unikalnych miast biorących udział w relacjach :ORIGIN i :DESTINATION węzłów typu Flight obsługiwanych przez daną linię).
+
+CALL {
+	MATCH (source:Airport)-[:ORIGIN]-(f:Flight)
+	RETURN DISTINCT source.name AS airports, f AS flights
+	UNION
+	MATCH (f:Flight)-[:DESTINATION]-(destination:Airport)
+	RETURN DISTINCT destination.name AS airports, f AS flights
+}
+RETURN flights.airline AS Airline, COUNT(DISTINCT airports) AS NumberOfUniqCities
+ORDER BY NumberOfUniqCities DESC
+
+10. Znajdź najtańszą trasę łączącą 3 różne porty lotnicze.
+
+MATCH (source:Airport)-[:ORIGIN]-(f1:Flight)-[d:DESTINATION]-(middle:Airport)-[:ORIGIN]-(f2:Flight)-[:DESTINATION]-(destination:Airport)
+MATCH (ticket1:Ticket{class:"economy"})-[:ASSIGN]->(f1)
+MATCH (ticket2:Ticket{class:"economy"})-[:ASSIGN]->(f2)
+WHERE source.name <> middle.name AND middle.name <> destination.name AND source.name <> destination.name
+RETURN source, middle, destination, f1, f2, ticket1, ticket2, ticket1.price + ticket2.price AS total
+ORDER BY total ASC
+LIMIT 1

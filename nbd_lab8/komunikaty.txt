@@ -1,0 +1,7 @@
+Runnnig main()
+Saved document: {'is_alive': True, 'last_name': 'Capaldi', 'number': 12, 'first_name': 'Peter'}
+Downloaded document: {u'is_alive': True, u'last_name': u'Capaldi', u'number': 12, u'first_name': u'Peter'}
+Updated document before sending: {u'is_alive': False, u'last_name': u'Capaldi', u'number': 12, u'first_name': u'Peter'}
+Document downloaded after update: {u'is_alive': False, u'last_name': u'Capaldi', u'number': 12, u'first_name': u'Peter'}
+Document downloaded after deletion: None
+main() end.

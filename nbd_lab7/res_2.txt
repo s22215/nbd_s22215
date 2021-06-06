@@ -1,0 +1,36 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> GET /buckets/s22215/keys/document_3 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl8o2uUGEUpkzGNlkJyje4svCwA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22215>; rel="up"
+< Last-Modified: Thu, 03 Jun 2021 18:31:53 GMT
+< ETag: "860urYGobdf9RSMhuteYJ"
+< Date: Thu, 03 Jun 2021 18:33:52 GMT
+< Content-Type: application/json
+< Content-Length: 79
+< 
+{ [79 bytes data]
+100    79  100    79    0     0  13166      0 --:--:-- --:--:-- --:--:-- 13166
+* Connection #0 to host localhost left intact
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl8o2uUGEUpkzGNlkJyje4svCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22215>; rel="up"
+Last-Modified: Thu, 03 Jun 2021 18:31:53 GMT
+ETag: "860urYGobdf9RSMhuteYJ"
+Date: Thu, 03 Jun 2021 18:33:52 GMT
+Content-Type: application/json
+Content-Length: 79
+
+{"is_alive": true, "number": 10, "first_name": "David", "last_name": "Tennant"}

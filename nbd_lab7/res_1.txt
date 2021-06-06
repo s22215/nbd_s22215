@@ -1,0 +1,190 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_1 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 82
+> 
+} [82 bytes data]
+* upload completely sent off: 82 out of 82 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:31:39 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+
+100    82    0     0  100    82      0  11714 --:--:-- --:--:-- --:--:-- 11714
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:31:39 GMT
+Content-Type: application/json
+Content-Length: 0
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_2 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 83
+> 
+} [83 bytes data]
+* upload completely sent off: 83 out of 83 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:31:45 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+
+100    83    0     0  100    83      0    378 --:--:-- --:--:-- --:--:--   380
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:31:45 GMT
+Content-Type: application/json
+Content-Length: 0
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_3 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 79
+> 
+} [79 bytes data]
+* upload completely sent off: 79 out of 79 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:31:53 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+
+100    79    0     0  100    79      0    724 --:--:-- --:--:-- --:--:--   731
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:31:53 GMT
+Content-Type: application/json
+Content-Length: 0
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_4 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 76
+> 
+} [76 bytes data]
+* upload completely sent off: 76 out of 76 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:31:58 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+
+100    76    0     0  100    76      0  12666 --:--:-- --:--:-- --:--:-- 15200
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:31:58 GMT
+Content-Type: application/json
+Content-Length: 0
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+curl -vi -XPUT -d '{"is_alive": true, "number": 12, "first_name": "Peter", "last_name": "Capaldi"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_5 &>> res_1.txt
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_5 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 79
+> 
+} [79 bytes data]
+* upload completely sent off: 79 out of 79 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:32:32 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+
+100    79    0     0  100    79      0    367 --:--:-- --:--:-- --:--:--   369
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:32:32 GMT
+Content-Type: application/json
+Content-Length: 0
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /buckets/s22215/keys/document_4 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 76
+> 
+} [76 bytes data]
+* upload completely sent off: 76 out of 76 bytes
+< HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Thu, 03 Jun 2021 18:40:40 GMT
+< Content-Type: application/json
+< Content-Length: 0
+< 
+100    76    0     0  100    76      0   6909 --:--:-- --:--:-- --:--:--  6909
+* Connection #0 to host localhost left intact
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Thu, 03 Jun 2021 18:40:40 GMT
+Content-Type: application/json
+Content-Length: 0
+

@@ -1,0 +1,465 @@
+MongoDB shell version v4.4.5
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("572be09a-ebd8-4f0f-a276-fe386abf847f") }
+MongoDB server version: 4.4.5
+{
+	"results" : [
+		{
+			"_id" : "Administrative Assistant",
+			"value" : "Administrative Assistant"
+		},
+		{
+			"_id" : "VP Sales",
+			"value" : "VP Sales"
+		},
+		{
+			"_id" : "Human Resources Manager",
+			"value" : "Human Resources Manager"
+		},
+		{
+			"_id" : "Safety Technician",
+			"value" : "Safety Technician"
+		},
+		{
+			"_id" : "Mechanical Systems Engineer",
+			"value" : "Mechanical Systems Engineer"
+		},
+		{
+			"_id" : "Senior Editor",
+			"value" : "Senior Editor"
+		},
+		{
+			"_id" : "Director of Sales",
+			"value" : "Director of Sales"
+		},
+		{
+			"_id" : "Web Designer",
+			"value" : "Web Designer"
+		},
+		{
+			"_id" : "Nurse",
+			"value" : "Nurse"
+		},
+		{
+			"_id" : "Legal Assistant",
+			"value" : "Legal Assistant"
+		},
+		{
+			"_id" : "Programmer Analyst",
+			"value" : "Programmer Analyst"
+		},
+		{
+			"_id" : "Marketing Manager",
+			"value" : "Marketing Manager"
+		},
+		{
+			"_id" : "Analog Circuit Design manager",
+			"value" : "Analog Circuit Design manager"
+		},
+		{
+			"_id" : "Food Chemist",
+			"value" : "Food Chemist"
+		},
+		{
+			"_id" : "Junior Executive",
+			"value" : "Junior Executive"
+		},
+		{
+			"_id" : "Research Nurse",
+			"value" : "Research Nurse"
+		},
+		{
+			"_id" : "Recruiter",
+			"value" : "Recruiter"
+		},
+		{
+			"_id" : "Paralegal",
+			"value" : "Paralegal"
+		},
+		{
+			"_id" : "Media Manager",
+			"value" : "Media Manager"
+		},
+		{
+			"_id" : "Executive Secretary",
+			"value" : "Executive Secretary"
+		},
+		{
+			"_id" : "Financial Advisor",
+			"value" : "Financial Advisor"
+		},
+		{
+			"_id" : "Information Systems Manager",
+			"value" : "Information Systems Manager"
+		},
+		{
+			"_id" : "Administrative Officer",
+			"value" : "Administrative Officer"
+		},
+		{
+			"_id" : "Budget/Accounting Analyst",
+			"value" : "Budget/Accounting Analyst"
+		},
+		{
+			"_id" : "Tax Accountant",
+			"value" : "Tax Accountant"
+		},
+		{
+			"_id" : "Structural Engineer",
+			"value" : "Structural Engineer"
+		},
+		{
+			"_id" : "Chief Design Engineer",
+			"value" : "Chief Design Engineer"
+		},
+		{
+			"_id" : "Speech Pathologist",
+			"value" : "Speech Pathologist"
+		},
+		{
+			"_id" : "Human Resources Assistant",
+			"value" : "Human Resources Assistant"
+		},
+		{
+			"_id" : "Associate Professor",
+			"value" : "Associate Professor"
+		},
+		{
+			"_id" : "Compensation Analyst",
+			"value" : "Compensation Analyst"
+		},
+		{
+			"_id" : "Senior Financial Analyst",
+			"value" : "Senior Financial Analyst"
+		},
+		{
+			"_id" : "Quality Control Specialist",
+			"value" : "Quality Control Specialist"
+		},
+		{
+			"_id" : "Environmental Tech",
+			"value" : "Environmental Tech"
+		},
+		{
+			"_id" : "Cost Accountant",
+			"value" : "Cost Accountant"
+		},
+		{
+			"_id" : "Geologist",
+			"value" : "Geologist"
+		},
+		{
+			"_id" : "Office Assistant",
+			"value" : "Office Assistant"
+		},
+		{
+			"_id" : "VP Marketing",
+			"value" : "VP Marketing"
+		},
+		{
+			"_id" : "VP Product Management",
+			"value" : "VP Product Management"
+		},
+		{
+			"_id" : "Payment Adjustment Coordinator",
+			"value" : "Payment Adjustment Coordinator"
+		},
+		{
+			"_id" : "Design Engineer",
+			"value" : "Design Engineer"
+		},
+		{
+			"_id" : "Chemical Engineer",
+			"value" : "Chemical Engineer"
+		},
+		{
+			"_id" : "Nuclear Power Engineer",
+			"value" : "Nuclear Power Engineer"
+		},
+		{
+			"_id" : "Research Assistant",
+			"value" : "Research Assistant"
+		},
+		{
+			"_id" : "Editor",
+			"value" : "Editor"
+		},
+		{
+			"_id" : "Librarian",
+			"value" : "Librarian"
+		},
+		{
+			"_id" : "Social Worker",
+			"value" : "Social Worker"
+		},
+		{
+			"_id" : "Computer Systems Analyst",
+			"value" : "Computer Systems Analyst"
+		},
+		{
+			"_id" : "Business Systems Development Analyst",
+			"value" : "Business Systems Development Analyst"
+		},
+		{
+			"_id" : "Help Desk Operator",
+			"value" : "Help Desk Operator"
+		},
+		{
+			"_id" : "Community Outreach Specialist",
+			"value" : "Community Outreach Specialist"
+		},
+		{
+			"_id" : "Software Test Engineer",
+			"value" : "Software Test Engineer"
+		},
+		{
+			"_id" : "Account Executive",
+			"value" : "Account Executive"
+		},
+		{
+			"_id" : "Assistant Manager",
+			"value" : "Assistant Manager"
+		},
+		{
+			"_id" : "Software Consultant",
+			"value" : "Software Consultant"
+		},
+		{
+			"_id" : "Accountant",
+			"value" : "Accountant"
+		},
+		{
+			"_id" : "Technical Writer",
+			"value" : "Technical Writer"
+		},
+		{
+			"_id" : "Financial Analyst",
+			"value" : "Financial Analyst"
+		},
+		{
+			"_id" : "Desktop Support Technician",
+			"value" : "Desktop Support Technician"
+		},
+		{
+			"_id" : "Account Representative",
+			"value" : "Account Representative"
+		},
+		{
+			"_id" : "Biostatistician",
+			"value" : "Biostatistician"
+		},
+		{
+			"_id" : "Engineer",
+			"value" : "Engineer"
+		},
+		{
+			"_id" : "Research Associate",
+			"value" : "Research Associate"
+		},
+		{
+			"_id" : "Staff Accountant",
+			"value" : "Staff Accountant"
+		},
+		{
+			"_id" : "Database Administrator",
+			"value" : "Database Administrator"
+		},
+		{
+			"_id" : "Senior Sales Associate",
+			"value" : "Senior Sales Associate"
+		},
+		{
+			"_id" : "Software Engineer",
+			"value" : "Software Engineer"
+		},
+		{
+			"_id" : "Help Desk Technician",
+			"value" : "Help Desk Technician"
+		},
+		{
+			"_id" : "Structural Analysis Engineer",
+			"value" : "Structural Analysis Engineer"
+		},
+		{
+			"_id" : "Automation Specialist",
+			"value" : "Automation Specialist"
+		},
+		{
+			"_id" : "Physical Therapy Assistant",
+			"value" : "Physical Therapy Assistant"
+		},
+		{
+			"_id" : "Registered Nurse",
+			"value" : "Registered Nurse"
+		},
+		{
+			"_id" : "GIS Technical Architect",
+			"value" : "GIS Technical Architect"
+		},
+		{
+			"_id" : "Health Coach",
+			"value" : "Health Coach"
+		},
+		{
+			"_id" : "Project Manager",
+			"value" : "Project Manager"
+		},
+		{
+			"_id" : "Pharmacist",
+			"value" : "Pharmacist"
+		},
+		{
+			"_id" : "Accounting Assistant",
+			"value" : "Accounting Assistant"
+		},
+		{
+			"_id" : "Product Engineer",
+			"value" : "Product Engineer"
+		},
+		{
+			"_id" : "Teacher",
+			"value" : "Teacher"
+		},
+		{
+			"_id" : "Actuary",
+			"value" : "Actuary"
+		},
+		{
+			"_id" : "Marketing Assistant",
+			"value" : "Marketing Assistant"
+		},
+		{
+			"_id" : "Environmental Specialist",
+			"value" : "Environmental Specialist"
+		},
+		{
+			"_id" : "Programmer",
+			"value" : "Programmer"
+		},
+		{
+			"_id" : "Electrical Engineer",
+			"value" : "Electrical Engineer"
+		},
+		{
+			"_id" : "Senior Developer",
+			"value" : "Senior Developer"
+		},
+		{
+			"_id" : "Graphic Designer",
+			"value" : "Graphic Designer"
+		},
+		{
+			"_id" : "Senior Cost Accountant",
+			"value" : "Senior Cost Accountant"
+		},
+		{
+			"_id" : "Quality Engineer",
+			"value" : "Quality Engineer"
+		},
+		{
+			"_id" : "Staff Scientist",
+			"value" : "Staff Scientist"
+		},
+		{
+			"_id" : "Operator",
+			"value" : "Operator"
+		},
+		{
+			"_id" : "VP Quality Control",
+			"value" : "VP Quality Control"
+		},
+		{
+			"_id" : "Clinical Specialist",
+			"value" : "Clinical Specialist"
+		},
+		{
+			"_id" : "Systems Administrator",
+			"value" : "Systems Administrator"
+		},
+		{
+			"_id" : "Civil Engineer",
+			"value" : "Civil Engineer"
+		},
+		{
+			"_id" : "General Manager",
+			"value" : "General Manager"
+		},
+		{
+			"_id" : "Nurse Practicioner",
+			"value" : "Nurse Practicioner"
+		},
+		{
+			"_id" : "Account Coordinator",
+			"value" : "Account Coordinator"
+		},
+		{
+			"_id" : "Professor",
+			"value" : "Professor"
+		},
+		{
+			"_id" : "Analyst Programmer",
+			"value" : "Analyst Programmer"
+		},
+		{
+			"_id" : "Developer",
+			"value" : "Developer"
+		},
+		{
+			"_id" : "Statistician",
+			"value" : "Statistician"
+		},
+		{
+			"_id" : "Web Developer",
+			"value" : "Web Developer"
+		},
+		{
+			"_id" : "Assistant Professor",
+			"value" : "Assistant Professor"
+		},
+		{
+			"_id" : "Assistant Media Planner",
+			"value" : "Assistant Media Planner"
+		},
+		{
+			"_id" : "Data Coordiator",
+			"value" : "Data Coordiator"
+		},
+		{
+			"_id" : "Geological Engineer",
+			"value" : "Geological Engineer"
+		},
+		{
+			"_id" : "Recruiting Manager",
+			"value" : "Recruiting Manager"
+		},
+		{
+			"_id" : "VP Accounting",
+			"value" : "VP Accounting"
+		},
+		{
+			"_id" : "Occupational Therapist",
+			"value" : "Occupational Therapist"
+		},
+		{
+			"_id" : "Sales Associate",
+			"value" : "Sales Associate"
+		},
+		{
+			"_id" : "Senior Quality Engineer",
+			"value" : "Senior Quality Engineer"
+		},
+		{
+			"_id" : "Internal Auditor",
+			"value" : "Internal Auditor"
+		},
+		{
+			"_id" : "Dental Hygienist",
+			"value" : "Dental Hygienist"
+		},
+		{
+			"_id" : "Sales Representative",
+			"value" : "Sales Representative"
+		}
+	],
+	"ok" : 1
+}

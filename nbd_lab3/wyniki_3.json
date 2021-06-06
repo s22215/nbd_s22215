@@ -1,0 +1,78 @@
+MongoDB shell version v4.4.4
+connecting to: mongodb://127.0.0.1:27017/nbd?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("85f22e6c-5ac1-411b-8c52-6ca4a6db6480") }
+MongoDB server version: 4.4.4
+[
+	{
+		"first_name" : "Larry",
+		"last_name" : "Romero"
+	},
+	{
+		"first_name" : "Benjamin",
+		"last_name" : "Romero"
+	},
+	{
+		"first_name" : "Shawn",
+		"last_name" : "Little"
+	},
+	{
+		"first_name" : "Samuel",
+		"last_name" : "Flores"
+	},
+	{
+		"first_name" : "Craig",
+		"last_name" : "Snyder"
+	},
+	{
+		"first_name" : "Sean",
+		"last_name" : "Duncan"
+	},
+	{
+		"first_name" : "Lawrence",
+		"last_name" : "Welch"
+	},
+	{
+		"first_name" : "George",
+		"last_name" : "Riley"
+	},
+	{
+		"first_name" : "Samuel",
+		"last_name" : "Dean"
+	},
+	{
+		"first_name" : "Samuel",
+		"last_name" : "Evans"
+	},
+	{
+		"first_name" : "Jose",
+		"last_name" : "Wells"
+	},
+	{
+		"first_name" : "Gerald",
+		"last_name" : "Duncan"
+	},
+	{
+		"first_name" : "Roy",
+		"last_name" : "Martinez"
+	},
+	{
+		"first_name" : "Kevin",
+		"last_name" : "Gonzalez"
+	},
+	{
+		"first_name" : "Dennis",
+		"last_name" : "Scott"
+	},
+	{
+		"first_name" : "Andrew",
+		"last_name" : "Ross"
+	},
+	{
+		"first_name" : "Dennis",
+		"last_name" : "Robertson"
+	},
+	{
+		"first_name" : "George",
+		"last_name" : "Morrison"
+	}
+]

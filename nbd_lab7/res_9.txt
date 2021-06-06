@@ -1,0 +1,36 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 127.0.0.1...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> GET /buckets/s22215/keys/65gemDgORfmHfd4pQ4kt6jzGxxE HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.58.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/waclLIJspgymRMY+V4eAy3Vt8WQA=
+< Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s22215>; rel="up"
+< Last-Modified: Thu, 03 Jun 2021 19:17:21 GMT
+< ETag: "3jI7CxgpY8KcOayDpAwZpS"
+< Date: Thu, 03 Jun 2021 19:17:55 GMT
+< Content-Type: text/plain
+< Content-Length: 31
+< 
+{ [31 bytes data]
+100    31  100    31    0     0   5166      0 --:--:-- --:--:-- --:--:--  6200
+* Connection #0 to host localhost left intact
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvl/waclLIJspgymRMY+V4eAy3Vt8WQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s22215>; rel="up"
+Last-Modified: Thu, 03 Jun 2021 19:17:21 GMT
+ETag: "3jI7CxgpY8KcOayDpAwZpS"
+Date: Thu, 03 Jun 2021 19:17:55 GMT
+Content-Type: text/plain
+Content-Length: 31
+
+{"quote": "Bow Ties are cool."}

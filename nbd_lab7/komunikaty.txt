@@ -1,0 +1,43 @@
+1. Umieść w bazie (nazwa bucketa ma być Twoim numerem indeksu poprzedzonym literą „s”) 5 wartości, gdzie każda z nich ma być dokumentem json mającym 4 pola co najmniej dwóch różnych typów. 
+
+curl -vi -XPUT -d '{"is_alive": false, "number": 1, "first_name": "William", "last_name": "Hartnell"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_1 &>> res_1.txt
+curl -vi -XPUT -d '{"is_alive": false, "number": 2, "first_name": "Patrick", "last_name": "Troughton"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_2 &>> res_1.txt
+curl -vi -XPUT -d '{"is_alive": true, "number": 10, "first_name": "David", "last_name": "Tennant"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_3 &>> res_1.txt
+curl -vi -XPUT -d '{"is_alive": true, "number": 11, "first_name": "Matt", "last_name": "Smith"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_4 &>> res_1.txt
+curl -vi -XPUT -d '{"is_alive": true, "number": 12, "first_name": "Peter", "last_name": "Capaldi"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_5 &>> res_1.txt
+
+2. Pobierz z bazy jedną z dodanych przez Ciebie wartości.
+
+curl -vi localhost:8098/buckets/s22215/keys/document_3 &> res_2.txt
+
+3. Zmodyfikuj jedną z wartości – dodając dodatkowe pole do dokumentu. 
+
+curl -vi -XPUT -d '{"is_alive": true, "number": 11, "first_name": "Matt", "last_name": "Smith", "main_companion":"Amy Pond"}}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_4 &> res_3.txt
+
+4. Zmodyfikuj jedną z wartości – usuwając jedną pole z wybranego dokumentu.
+
+curl -vi -XPUT -d '{"is_alive": false, "number": 1, "first_name": "William"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_1 &> res_4.txt
+
+5. Zmodyfikuj jedną z wartości – zmieniając wartość jednego z pól. 
+
+curl -vi -XPUT -d '{"is_alive": false, "number": 2, "first_name": "Ptrk", "last_name": "Troughton"}' -H "Content-Type: application/json" localhost:8098/buckets/s22215/keys/document_2 &> res_5.txt
+
+6. Usuń jeden z dokumentów z bazy.
+
+curl -vi -X DELETE http://127.0.0.1:8098/buckets/s22215/keys/document_5 &> res_6.txt
+
+7. Spróbuj pobrać z bazy wartość, która nie istnieje w tej bazie. 
+
+curl -vi localhost:8098/buckets/s22215/keys/document_11 &> res_7.txt
+
+8. Dodaj do bazy 1 dokument json (zawierający 1 pole), ale nie specyfikuj klucza.
+
+curl -vi -XPOST -H "Content-Type: text/plain" -d '{"quote": "Bow Ties are cool."}' http://localhost:8098/buckets/s22215/keys &> res_8.txt
+
+9. Pobierz z bazy element z zadania 8. 
+
+curl -vi localhost:8098/buckets/s22215/keys/65gemDgORfmHfd4pQ4kt6jzGxxE &> res_9.txt
+
+10. Usuń z bazy element z zadania 8. 
+
+curl -vi -X DELETE http://127.0.0.1:8098/buckets/s22215/keys/65gemDgORfmHfd4pQ4kt6jzGxxE &> res_10.tx
